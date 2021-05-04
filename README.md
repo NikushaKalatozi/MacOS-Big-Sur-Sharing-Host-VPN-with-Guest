@@ -20,4 +20,5 @@ FAQ
 
 2. Network connection should be set to "Share with Mac".
 
+3. Works with .ovpn configs.
 
