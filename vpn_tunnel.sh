@@ -14,7 +14,7 @@ $$  \ /$$/ $$    $$/ $$$$  $$ |         $$ | $$ |  $$ |$$$$$$$  |$$$$$$$  |/$$$$
 
 
 EOF
-export utunid=$(ifconfig | grep -B 1 -- -- | awk -F ":" '{print $1}' | grep ^u)
+export utunid=$(ifconfig | awk -F ":" '/^u/ {intface=$1;  next} /--/ {print intface}')
 export bridge100ip=$(ifconfig bridge100 | grep 'inet ' | awk '{print $2}' | sed 's:[^.]*$:0/24:') 
 sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/null
 sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/null > newrules.conf
