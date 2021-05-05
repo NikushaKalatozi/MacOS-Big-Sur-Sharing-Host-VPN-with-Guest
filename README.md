@@ -8,7 +8,7 @@ Usage
 
 1. Turn on VPN on your MacOS.
 2. Make sure you run this script on Host.
-3. Chmod +x vpn_tunnel.sh
+3. chmod +x vpn_tunnel.sh
 4. ./vpn_tunnel.sh
 
 Done!
